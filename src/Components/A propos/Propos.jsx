@@ -1,5 +1,4 @@
 import {Link} from "react-router"
-import Footer from "../Footer/Footer.jsx"
 import Page from "../Page/Page.jsx"
 import "./Propos.scss"
 function Propos() {
