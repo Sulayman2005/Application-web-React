@@ -1,5 +1,5 @@
 import {Link} from "react-router"
-import Page from "../Page/Page.jsx"
+import Page from "../Page.jsx"
 import "./Propos.scss"
 function Propos() {
 
@@ -14,7 +14,7 @@ function Propos() {
                     <img src="logo.png" alt="Logo"/>
                 </div>
                 <Link to="/" className="text" style={{ textDecoration: 'none'}} >
-                    <div>Acceuil</div>
+                    <div>Accueil</div>
                 </Link> 
                 <Link to="/propos" className="text_2">
                     <div>A propos</div>

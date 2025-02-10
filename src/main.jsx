@@ -3,27 +3,15 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import './index.scss'
 import App from './App.jsx'
-import Banner from "./Components/Banner/Banner.jsx"
-import Navbar from "./Components/Navbar/Navbar.jsx"
 import Logement from "./Components/Logement/Logement.jsx"
-import Propos from "./Components/A propos/Propos.jsx"
-import Page from "../src/Components/Page/Page.jsx"
-import Error from "../src/Components/Error/Error.jsx"
+import Propos from "./Header/Page/Propos.jsx"
+import Page from "./Header/Page.jsx"
+import Error from "./Header/Page/Error.jsx"
 
 const root = createBrowserRouter([
     {
         path: "/",
         element: <App />,
-        errorElement: <Error />
-    },
-    {
-        path: "/navbar",
-        element: <Navbar />,
-        errorElement: <Error />
-    },
-    {
-        path: "/banner",
-        element: <Banner />,
         errorElement: <Error />
     },
     {

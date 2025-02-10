@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Page.scss"
-import ChevronUp from "../images/ChevronUp.png"
-import ChevronDown from "../images/ChevronDown.png"
+import ChevronUp from "../assets/images/ChevronUp.png"
+import ChevronDown from "../assets/images/ChevronDown.png"
 function Page({ title, content}) {
     const [contentvisible, setcontentvisible] = useState(true);
 
