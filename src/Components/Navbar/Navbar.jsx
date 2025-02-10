@@ -9,7 +9,7 @@ function Navbar() {
                     <img src="logo.png" alt="Logo"/>
                 </div>
                 <div>
-                    <div className="text">Acceuil</div>
+                    <div className="text">Accueil</div>
                 </div> 
                 <Link to="/propos" style={{ textDecoration: 'none'}} 
                     className="text_2">
