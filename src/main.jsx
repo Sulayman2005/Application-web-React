@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import './index.scss'
 import App from './App.jsx'
-import Logement from "./Components/Logement/Logement.jsx"
 import Propos from "./Header/Page/Propos.jsx"
+import Carrousel from "./Carrousel/Carrousel.jsx"
 import Page from "./Header/Page.jsx"
 import Error from "./Header/Page/Error.jsx"
 
@@ -20,8 +20,8 @@ const root = createBrowserRouter([
         errorElement: <Error />
     },
     {
-        path: "/logement",
-        element: <Logement />,
+        path: "/carrousel",
+        element: <Carrousel />,
         errorElement: <Error />
     },
     {

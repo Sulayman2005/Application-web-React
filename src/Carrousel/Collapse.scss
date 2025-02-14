@@ -1,10 +1,13 @@
-.textimage {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.textimage2 {
+    width: 582px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
-.visible.textimage ul {
+.visible.textimage2 ul {
     color: #FF6060;
     padding: 36px 27px 19px 18px;
     margin: 0;
@@ -12,7 +15,7 @@
     list-style-type: none;
 }
 
-.text_header {
+.text_header2 {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -26,10 +29,10 @@
     cursor: pointer;
 }
 
-
-.text_header span {
+.text_header2 span {
     padding-right: auto;
 }
+
 /* affiche le contenu */
 .visible {
     display: block;
@@ -40,12 +43,12 @@
     display: none;
 }
 
-.chevronValue img {
+.chevronValue2 img {
     width: 25px;
     height: 15px;
 }
 
-.visible.textimage {
+.visible.textimage2 {
     position: relative;
     top: -10px;
     font-size: 18px;
@@ -61,22 +64,25 @@
     margin: 0;
 }
 
-.text_content {
+.text_content2 {
     transition: max-height 0.2s ease-in-out;
 }
 
 /* Cache uniquement le texte */
-.text_content.hidden {
+.text_content2.hidden {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .text_header {
+    .text_header2 {
         font-size: 13px;
         height: 20px;
     }
-    .visible.textimage ul {
+    .visible.textimage2 ul {
         font-size: 12px;
-        padding: 23px 7px 5px 11.5px; 
+        padding: 23px 7px 5px 11.5px;
+    }
+    .textimage2 {
+        width: 400px;
     }
 }

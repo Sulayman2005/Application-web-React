@@ -20,7 +20,7 @@ function Page({ title, content}) {
                         <img src={affcontentchevron} alt="Chevron" />
                     </div>
                 </div>
-                {contentvisible && (
+            {contentvisible && (
                 <div className="text_content">
                     <ul>{content}</ul>
                 </div>

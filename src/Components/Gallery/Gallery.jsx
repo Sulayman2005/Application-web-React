@@ -8,7 +8,7 @@ function Gallery() {
             <div className="text_image">
                 {logement.map((data) => (
                     <div key={data.id}>
-                        <Link to="/logement">
+                        <Link to="/carrousel">
                             <div className="text">
                                 <img src={data.cover} alt={data.title} />
                                 <h2>{data.title}</h2>

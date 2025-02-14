@@ -1,9 +1,16 @@
+.element_navbar {
+    max-width: 1680px;
+    margin: auto;
+    position: relative;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 2rem;
     margin-right: 2rem;
+    margin: 15px;
     &__logo {
         display: flex;
         width: 145px;
@@ -30,8 +37,6 @@
     color: #000000;
     &_2 {
         font-family: Montserrat;
-        font-size: 18px;
-        font-weight: 500;
         line-height: 17.11px;
         cursor: pointer;
         text-align: right;

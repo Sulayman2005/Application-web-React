@@ -86,16 +86,13 @@
     flex-direction: column;
     padding-inline: 158px;
     margin-top: 15px;
+    gap: 2rem;
 }
 
 .flex {
-    display: flex;
-    flex-direction: column;
-    width: 374;
-    height: 623.880615234375px;
-    top: 3543px;
-    left: 948px;
-    gap: 19px;
+    max-width: 1680px;
+    margin: auto;
+    position: relative;
 }
 
 @media (max-width: 700px) { 
@@ -104,16 +101,15 @@
 
 /******* */
 
-.logo_footer2 {
+.logo_footer {
     display: grid;
     place-items: center;
     width: 100%;
-    height: 370px;
+    height: 440px;
     background: #000000;
     color: white;
     margin: auto;
     min-height: 140px;
-    margin-top: 2rem;
     & img {
         margin-top: 2rem;
     }
@@ -121,10 +117,10 @@
 
 /* version mobile */
 @media screen and (width <= 550px) {
-    .logo_footer2 p {
+    .logo_footer p {
         width: 50%;
         width: 133.59px;
-        height: 200px;
+        height: 440px;
         font-family: Montserrat;
         font-size: 13px;
         font-weight: 500;
@@ -136,10 +132,9 @@
 }
 
 @media screen and (width <= 1500px) {
-    .logo_footer2 p {
+    .logo_footer p {
         width: 50%;
-        width: 133.59px;
-        height: 280px;
+        height: 440px;
         font-family: Montserrat;
         font-size: 13px;
         font-weight: 500;
@@ -151,9 +146,9 @@
 }
 
 @media screen and (width <= 1500px) {
-    .logo_footer2 {
+    .logo_footer {
         width: 100%;
-        height: 100%;
+        height: 440px;
         font-family: Montserrat;
         font-size: 13px;
         font-weight: 500;

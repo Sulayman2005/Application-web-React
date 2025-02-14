@@ -3,11 +3,11 @@ import { Link } from "react-router"
 import "./Navbar.scss"
 function Navbar() {
     return (
-        <>
+        <div className="element_navbar">
             <nav className="navbar">
-                <div className="navbar__logo">
+                <Link to="/" className="navbar__logo">
                     <img src="logo.png" alt="Logo"/>
-                </div>
+                </Link>
                 <div>
                     <div className="text">Accueil</div>
                 </div> 
@@ -16,7 +16,7 @@ function Navbar() {
                     <div>A propos</div>
                 </Link>               
             </nav>
-        </>
+        </div>
     )
 }
 
