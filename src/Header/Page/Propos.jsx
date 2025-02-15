@@ -1,5 +1,6 @@
 import {Link} from "react-router"
 import Page from "../Page.jsx"
+import Footer from "../../Components/Footer/Footer.jsx"
 import "./Propos.scss"
 function Propos() {
 
@@ -30,12 +31,7 @@ function Propos() {
                     <div><Page title="Sécurité" content={Sécurité} /></div>
                 </div>
             </div>
-            <footer>
-                <div className="logo_footer">
-                    <img src="logo_footer.png" alt="Logo" />
-                    <p>© 2020 Kasa. All rights reserved</p>
-                </div>
-            </footer>
+            <Footer />
         </>
     )
 }

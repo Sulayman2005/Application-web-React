@@ -2,6 +2,7 @@ import Navbar from "../Components/Navbar/Navbar.jsx"
 import { useState } from "react";
 import "./Carrousel.scss"
 import Collapse from "./Collapse.jsx"
+import Footer from "../Components/Footer/Footer.jsx"
 import Arrowleft from "../assets/images/Arrow-left.png"
 import Arrowright from "../assets/images/Arrow-right.png"
 function Carrousel() {
@@ -28,10 +29,7 @@ function Carrousel() {
     };
 
     const prevSlide = () => {
-        setIndex(Index - 1);
-        if(Index === 0){
-            setIndex(0)(imageCarrousel.length - 1)
-        }
+        setIndex(Index === 0 ? imageCarrousel.length - 1 : Index - 1)
     };
 
     return (
@@ -59,20 +57,23 @@ function Carrousel() {
                 </div>
                 <div className="item_logement">
                     <div className="title_logement">Cozy loft on the Canal Saint-Martin</div>
-                    <div className="text2">
-                        Alexandre<br /> Dumas
-                    </div>
-                    <div className="circle"></div>
                     <div className="text_logement">Paris, île-de-france</div>
+
                     <div className="tag_logement">
                         <div className="tag">Cozy</div>
                         <div className="tag">Canal</div>
                         <div className="tag">Paris 10</div>
                     </div>
-                    <div className="star_element">
-                        {[...Array(5)].map((_, index) => (
-                            <p key={index} className={index < rating ? "star_red" : "star_grey"}>★</p>
-                        ))}
+                    <div className="logement_info">
+                        <div className="logement_profil">
+                            <div className="text2">Alexandre<br />Dumas</div>
+                            <div className="circle"></div>
+                        </div>
+                        <div className="star_element">
+                            {[...Array(5)].map((_, index) => (
+                                <p key={index} className={index < rating ? "star_red" : "star_grey"}>★</p>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className="about2">
@@ -80,12 +81,7 @@ function Carrousel() {
                     <div className="about4"><Collapse titre="Service" content2={Service} /></div>
                 </div>
             </div>
-            <footer>
-                <div className="logo_footer2">
-                    <img src="logo_footer.png" alt="Logo"/>
-                    <p>© 2020 Kasa. All rights reserved</p>
-                </div>
-            </footer>
+            <Footer />
         </>
     )
 }
