@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.scss'
 import App from './App.jsx'
 import Propos from "./Header/Page/Propos.jsx"
@@ -20,7 +20,7 @@ const root = createBrowserRouter([
         errorElement: <Error />
     },
     {
-        path: "/carrousel",
+        path: "/carrousel/:id",
         element: <Carrousel />,
         errorElement: <Error />
     },

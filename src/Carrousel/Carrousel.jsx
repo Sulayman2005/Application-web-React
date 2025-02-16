@@ -1,7 +1,9 @@
 import Navbar from "../Components/Navbar/Navbar.jsx"
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Carrousel.scss"
 import Collapse from "./Collapse.jsx"
+import { useParams } from "react-router-dom"; // ✅ Pour récupérer l'ID
+import logements from "../data/logements.json";
 import Footer from "../Components/Footer/Footer.jsx"
 import Arrowleft from "../assets/images/Arrow-left.png"
 import Arrowright from "../assets/images/Arrow-right.png"
@@ -11,9 +13,10 @@ function Carrousel() {
     const Respect = "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
     const Service = "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
     
-    const [Index, setIndex] = useState(0);
-
-    const imageCarrousel = [
+    {/* 
+        const [Index, setIndex] = useState(0);
+        
+        const imageCarrousel = [
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
@@ -30,29 +33,24 @@ function Carrousel() {
 
     const prevSlide = () => {
         setIndex(Index === 0 ? imageCarrousel.length - 1 : Index - 1)
-    };
+    };*/}
+    
+
+    const { id } = useParams(); // ✅ Récupère l'ID depuis l'URL
+    const logement = logements.find(item => item.id === id); // ✅ Trouver le bon logement
+
+    if (!logement) {
+        return <p>Logement introuvable.</p>; // ✅ Gestion d'erreur
+    }
 
     return (
         <>
             <div className="element">
                 <Navbar />
                 <div className="Carrousel">
-                    <div 
-                        className="element_page"
-                        style={{ backgroundImage: `url(${imageCarrousel[Index]})` }}>
-                            <img 
-                                src={Arrowright} 
-                                alt="" 
-                                className="btn-right"
-                                onClick={nextSlide}/>
-                            <img 
-                                src={Arrowleft} 
-                                alt="" 
-                                className="btn-left" 
-                                onClick={prevSlide}/>     
-                        <p className="counter">
-                            {Index + 1} / {imageCarrousel.length}
-                        </p>
+                    <div className="element_page" style={{ backgroundImage: `url(${logement.cover})` }}>
+                        <h2>{logement.title}</h2>
+                        <p>{logement.location}</p>
                     </div>
                 </div>
                 <div className="item_logement">
