@@ -1,11 +1,8 @@
-import { Link } from "react-router"
 import React, { useState } from "react";
-import logo from "../../../../public/logo.png"
 import "./Carrousel.scss"
 import Collapse from "./Collapse.jsx"
 import { useParams } from "react-router-dom"; // Pour récupérer l'ID
 import logements from "../../../data/logements.json";
-import logo_footer from "../../../../public/logo_footer.png"
 import Arrowleft from "../../../assets/images/Arrow-left.png"
 import Arrowright from "../../../assets/images/Arrow-right.png"
 function Carrousel() {
@@ -27,23 +24,9 @@ function Carrousel() {
     const prevSlide = () => {
         setIndex(Index === 0 ? imageCarrousel.length - 1 : Index - 1)
     };
-    
+
     return (
         <>
-            <div className="element_navbar">
-                <nav className="navbar">
-                    <Link to="/" className="navbar__logo">
-                        <img src={logo} alt="Logo"/>
-                    </Link>
-                    <div>
-                        <div className="text_2">Accueil</div>
-                    </div> 
-                    <Link to="/propos" style={{ textDecoration: 'none'}} 
-                        className="text_2">
-                        <div>A propos</div>
-                    </Link>               
-                </nav>
-            </div>
             <div className="element">
                 <div className="Carrousel">
                     <div className="element_page" style={{ backgroundImage: `url(${imageCarrousel[Index]})` }}>
@@ -96,12 +79,6 @@ function Carrousel() {
                     } />
                 </div>
             </div>
-            <footer>
-                <div className="logo_footer2">
-                    <img src={logo_footer} alt="Logo"/>
-                    <p>© 2020 Kasa. All rights reserved</p>
-                </div>
-            </footer>
         </>
     )
 }

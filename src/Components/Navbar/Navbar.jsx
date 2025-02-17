@@ -8,9 +8,9 @@ function Navbar() {
                 <Link to="/" className="navbar__logo">
                     <img src="logo.png" alt="Logo"/>
                 </Link>
-                <div>
+                <Link to="/">
                     <div className="text">Accueil</div>
-                </div> 
+                </Link> 
                 <Link to="/propos" style={{ textDecoration: 'none'}} 
                     className="text_2">
                     <div>A propos</div>

@@ -7,32 +7,23 @@ import Propos from "./Header/Page/Propos.jsx"
 import Carrousel from "./Header/Page/Carrousel/Carrousel.jsx"
 import Page from "./Header/Page.jsx"
 import Error from "./Header/Page/Error.jsx"
+import Root from "./Root.jsx";
 
-const root = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
-        errorElement: <Error />
-    },
-    {
-        path: "/propos",
-        element: <Propos />,
-        errorElement: <Error />
-    },
-    {
-        path: "/carrousel/:id",
-        element: <Carrousel />,
-        errorElement: <Error />
-    },
-    {
-        path: "/page",
-        element: <Page />,
-        errorElement: <Error />
-    },
+        element: <Root />,
+        errorElement: <Error />, 
+        children: [
+            { path: "/", element: <App /> },
+            { path: "/propos", element: <Propos /> },
+            { path: "/carrousel/:id", element: <Carrousel /> },
+        ]
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <RouterProvider router={root} />
+        <RouterProvider router={router} />
     </React.StrictMode>
 )

@@ -1,6 +1,4 @@
-import Navbar from "../../Components/Navbar/Navbar.jsx"
 import Page from "../Page.jsx"
-import Footer from "../../Components/Footer/Footer.jsx"
 import "./Propos.scss"
 function Propos() {
 
@@ -11,7 +9,6 @@ function Propos() {
     return (
         <>  
             <div className="flex">
-                <Navbar />
                 <div className="banner2">
                 </div>
                 <div className="about">
@@ -21,7 +18,6 @@ function Propos() {
                     <div><Page title="Sécurité" content={Sécurité} /></div>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }
