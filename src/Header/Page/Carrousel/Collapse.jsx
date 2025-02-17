@@ -1,7 +1,7 @@
 import "./Collapse.scss"
 import React, { useState } from 'react'
-import ChevronUp from "../assets/images/ChevronUp.png"
-import ChevronDown from "../assets/images/ChevronDown.png"
+import ChevronUp from "../../../assets/images/ChevronUp.png"
+import ChevronDown from "../../../assets/images/ChevronDown.png"
 function Collapse({ titre, content2}) {
     const [collapse, setcollapse] = useState(true);
 

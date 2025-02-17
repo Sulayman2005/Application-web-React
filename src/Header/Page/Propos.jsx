@@ -1,4 +1,4 @@
-import {Link} from "react-router"
+import Navbar from "../../Components/Navbar/Navbar.jsx"
 import Page from "../Page.jsx"
 import Footer from "../../Components/Footer/Footer.jsx"
 import "./Propos.scss"
@@ -11,17 +11,7 @@ function Propos() {
     return (
         <>  
             <div className="flex">
-                <nav className="navbar">
-                    <Link to="/" className="navbar__logo">
-                        <img src="logo.png" alt="Logo"/>
-                    </Link>
-                    <Link to="/" className="text" style={{ textDecoration: 'none'}} >
-                        <div>Accueil</div>
-                    </Link> 
-                    <Link to="/propos" className="text_2">
-                        <div>A propos</div>
-                    </Link>               
-                </nav>
+                <Navbar />
                 <div className="banner2">
                 </div>
                 <div className="about">

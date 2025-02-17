@@ -51,7 +51,7 @@
     color: #FF6060;
 }
 
-.circle {
+.circle img {
     display: flex;
     align-items: end;
     justify-content: end;
@@ -63,11 +63,11 @@
     border-radius: 50%;
 }
     
-
 .about2 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    gap: 20px;
 }
 
 .title_logement {
@@ -82,45 +82,33 @@
     color: #FF6060;
 }
 
-.text_logement {
-    width: 175px;
-    height: 26px;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25.67px;
-    letter-spacing: 0%;
-    color: #000000;
-    margin-top: 1rem;
-}
-
-
 .star_element {
     display: flex;
     align-items: end;
     justify-content: end;
     margin-left: auto;
     font-size: 28px;
-    margin-top: -62px;
+    font-size: 24px;
     .star_red {
         color: #FF6060;
     }
+
     .star_grey {
         color: #C4C4C4;
     }
 }
 
+
 .tag_logement {
     display: flex;
     gap: 2rem;
+    font-size: 15px;
     width: 365px;
-    height: 25px;
-    margin-top: 1rem;
-    .tag {
+    height: 35px;
+    margin-top: 3rem;
+    span {
         display: grid;
         place-items: center;
-        width: 115px;
-        height: 25px;
         border-radius: 10px;
         background: #FF6060;
         color: white;
@@ -142,14 +130,24 @@
     }
 }
 
-/* Conteneur principal */
-.logement_info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 4rem;
-}
+.about4 {
+    .equipements-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
+        li {
+            font-size: 16px;
+            color: #333;
+            background: #f7f7f7;
+            padding: 8px 12px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
 
 
 /* Responsive : Alignement vertical */
@@ -162,8 +160,18 @@
 /* Version Mobile */
 @media screen and (max-width: 700px) {
     .title_logement {
-        font-size: 24px; // Réduction de la taille
+        font-size: 25px; // Réduction de la taille
         padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logement_info {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 5rem;
+        flex-direction: column;
     }
 }
 
@@ -210,7 +218,7 @@
     }
 }
 
-@media screen and ( width <= 1200px) {
+@media screen and ( width <= 1100px) {
     .about2 {
         display: flex;
         align-items: center;

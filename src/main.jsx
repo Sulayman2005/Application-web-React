@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.scss'
 import App from './App.jsx'
 import Propos from "./Header/Page/Propos.jsx"
-import Carrousel from "./Carrousel/Carrousel.jsx"
+import Carrousel from "./Header/Page/Carrousel/Carrousel.jsx"
 import Page from "./Header/Page.jsx"
 import Error from "./Header/Page/Error.jsx"
 
