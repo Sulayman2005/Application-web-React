@@ -3,10 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.scss'
 import App from './App.jsx'
-import Propos from "./Header/Page/Propos.jsx"
-import Carrousel from "./Header/Page/Carrousel/Carrousel.jsx"
-import Page from "./Header/Page.jsx"
-import Error from "./Header/Page/Error.jsx"
+import Propos from "./Pages/Propos.jsx"
+import Carrousel from "./Pages/Logement.jsx"
+import Error from "./Pages/Error.jsx"
 import Root from "./Root.jsx";
 
 const router = createBrowserRouter([

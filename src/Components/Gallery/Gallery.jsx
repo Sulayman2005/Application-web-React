@@ -14,6 +14,7 @@ function Gallery() {
                         <div className="text">
                             <img src={logement.cover} alt={logement.title} />
                             <h2>{logement.title}</h2>
+                            <div className="background"></div>
                         </div>
                     </Link>
                 </div>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Carrousel.scss"
-import Collapse from "./Collapse.jsx"
+import "./Logement.scss"
+import Collapse2 from "./Collapse2.jsx"
 import { useParams } from "react-router-dom"; // Pour récupérer l'ID
-import logements from "../../../data/logements.json";
-import Arrowleft from "../../../assets/images/Arrow-left.png"
-import Arrowright from "../../../assets/images/Arrow-right.png"
-function Carrousel() {
+import logements from "../data/logements.json";
+import Arrowleft from "../assets/images/Arrow-left.png"
+import Arrowright from "../assets/images/Arrow-right.png"
+function Logement() {
 
     const { id } = useParams();
     const logement = logements.find(item => item.id === id);
@@ -13,7 +13,7 @@ function Carrousel() {
     const [Index, setIndex] = useState(0);
         
     const imageCarrousel = logement.pictures
-
+    
     const nextSlide = () => {
         setIndex(Index + 1);
         if(Index === imageCarrousel.length - 1){
@@ -30,19 +30,23 @@ function Carrousel() {
             <div className="element">
                 <div className="Carrousel">
                     <div className="element_page" style={{ backgroundImage: `url(${imageCarrousel[Index]})` }}>
-                        <img 
-                            src={Arrowright}
-                            className="btn-right"
-                            onClick={nextSlide}
-                        />
-                        <img 
-                            src={Arrowleft}
-                            className="btn-left"
-                            onClick={prevSlide}
-                        />
-                        <p className="counter">
-                            {Index + 1} / {imageCarrousel.length}
-                        </p>
+                        {imageCarrousel.length > 1 && (
+                            <>
+                                <img 
+                                    src={Arrowright}
+                                    className="btn-right"
+                                    onClick={nextSlide}
+                                />
+                                <img 
+                                    src={Arrowleft}
+                                    className="btn-left"
+                                    onClick={prevSlide}
+                                />
+                                <p className="counter">
+                                    {Index + 1} / {imageCarrousel.length}
+                                </p>
+                            </>
+                        )}
                     </div>
                 </div>
                 <div className="item_logement">
@@ -68,9 +72,9 @@ function Carrousel() {
                 </div>
                 <div className="about2">
                     <div className="about3">
-                        <Collapse titre="Description" content2={logement.description} />
+                        <Collapse2 titre="Description" content2={logement.description} />
                     </div>
-                    <Collapse titre="Équipements" content2={
+                    <Collapse2 titre="Équipements" content2={
                         <ul className="equipements-list">
                             {logement.equipments.map((equip, i) => (
                                 <li key={i}>{equip}</li>
@@ -83,4 +87,4 @@ function Carrousel() {
     )
 }
 
-export default Carrousel
+export default Logement

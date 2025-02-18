@@ -70,7 +70,7 @@
     margin-top: 1rem;
     font-family: Montserrat;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 26px;
     line-height: 51.34px;
     letter-spacing: 0%;
     color: #FF6060;
@@ -156,6 +156,11 @@ ul {
     list-style-type : none;
 }
 
+.Carrousel.single-image {
+    .btn-left, .btn-right, .counter {
+        display: none;
+    }
+}
 
 /* Version Mobile */
 @media screen and (max-width: 1000px) {
@@ -175,7 +180,6 @@ ul {
     }
 }
 
-
 @media screen and (max-width: 700px) {
     .title_logement {
         font-size: 25px; // Réduction de la taille
@@ -188,7 +192,9 @@ ul {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        margin-top: 5rem;
+        margin-top: 3rem;
+        flex-direction: row-reverse;
+        gap: 140px;
     }
 }
 

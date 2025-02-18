@@ -1,8 +1,8 @@
-import "./Collapse.scss"
+import "./Collapse2.scss"
 import React, { useState } from 'react'
-import ChevronUp from "../../../assets/images/ChevronUp.png"
-import ChevronDown from "../../../assets/images/ChevronDown.png"
-function Collapse({ titre, content2}) {
+import ChevronUp from "../assets/images/ChevronUp.png"
+import ChevronDown from "../assets/images/ChevronDown.png"
+function Collapse2({ titre, content2}) {
     const [collapse, setcollapse] = useState(true);
 
     const affContent = () => {
@@ -20,14 +20,12 @@ function Collapse({ titre, content2}) {
                         <img src={affcontentchevron} alt="Chevron" />
                     </div>
                 </div>
-                {collapse && (
-                <div className="text_content2">
+                <div className={`text_content ${collapse ? "visible" : ""}`}>
                     <ul>{content2}</ul>
                 </div>
-            )}
             </div>
         </>
     )
 }
 
-export default Collapse
+export default Collapse2

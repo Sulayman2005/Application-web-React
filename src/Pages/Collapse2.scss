@@ -63,7 +63,16 @@
 }
 
 .text_content2 {
-    transition: max-height 0.2s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+// Quand la collapse est ouverte
+.text_content2.visible {
+    max-height: 500px; // Ajuste selon le contenu
+    opacity: 1;
 }
 
 /* Cache uniquement le texte */
