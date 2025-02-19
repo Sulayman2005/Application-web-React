@@ -182,8 +182,7 @@ ul {
 
 @media screen and (max-width: 700px) {
     .title_logement {
-        font-size: 25px; // Réduction de la taille
-        padding: 0 10px;
+        font-size: 20px; // Réduction de la taille
     }
 }
 
@@ -195,6 +194,12 @@ ul {
         margin-top: 3rem;
         flex-direction: row-reverse;
         gap: 140px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .tag_logement {
+        font-size: 10px;
     }
 }
 
