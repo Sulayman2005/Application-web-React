@@ -1,4 +1,4 @@
-import Page from "../Pages/Collapse"
+import Page from "../Collapse/Collapse"
 import "./Propos.scss"
 function Propos() {
 

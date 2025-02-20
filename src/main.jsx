@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './index.scss'
 import App from './App.jsx'
-import Propos from "./Pages/Propos.jsx"
-import Carrousel from "./Pages/Logement.jsx"
-import Error from "./Pages/Error.jsx"
-import Root from "./Root.jsx";
+import Propos from "./Pages/Propos/Propos.jsx"
+import Logement from "./Pages/Logement/Logement.jsx"
+import Error from "./Pages/Error/Error.jsx"
+import Root from "./Root.jsx"
 
 const router = createBrowserRouter([
     {
@@ -16,7 +16,8 @@ const router = createBrowserRouter([
         children: [
             { path: "/", element: <App /> },
             { path: "/propos", element: <Propos /> },
-            { path: "/carrousel/:id", element: <Carrousel /> },
+            { path: "/logement/:id", element: <Logement /> },
+            { path: "/error", element: <Error /> },
         ]
     }
 ]);

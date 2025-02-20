@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "./Collapse.scss";
-import ChevronUp from "../assets/images/ChevronUp.png";
-import ChevronDown from "../assets/images/ChevronDown.png";
+import React, { useState } from "react"
+import "./Collapse.scss"
+import ChevronUp from "../../assets/images/ChevronUp.png"
+import ChevronDown from "../../assets/images/ChevronDown.png"
 
 function Collapse({ title, content }) {
-    const [contentvisible, setcontentvisible] = useState(false);
+    const [contentvisible, setcontentvisible] = useState("");
 
     const affContent = () => {
         setcontentvisible(!contentvisible);
@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
                 <div className="text_header" onClick={affContent}>
                     <span>{title}</span>
                     <div className="chevronValue">
-                        <img src={contentvisible ? ChevronDown : ChevronUp} alt="Chevron" />
+                        <img src={contentvisible ? ChevronDown : ChevronUp} alt="" />
                     </div>
                 </div>
                 <div className={`text_content ${contentvisible ? "visible" : ""}`}>

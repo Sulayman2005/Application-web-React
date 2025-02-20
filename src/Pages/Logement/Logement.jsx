@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import "./Logement.scss"
-import Collapse2 from "./Collapse2.jsx"
-import { useParams } from "react-router-dom"; // Pour récupérer l'ID
-import logements from "../data/logements.json";
-import Arrowleft from "../assets/images/Arrow-left.png"
-import Arrowright from "../assets/images/Arrow-right.png"
+import Collapse2 from "../Collapse/Collapse2.jsx"
+import { useParams } from "react-router-dom" // Pour récupérer l'ID
+import logements from "../../data/logements.json"
+import Arrowleft from "../../assets/images/Arrow-left.png"
+import Arrowright from "../../assets/images/Arrow-right.png"
 function Logement() {
 
     const { id } = useParams();
@@ -52,9 +52,8 @@ function Logement() {
                 <div className="item_logement">
                     <h2 className="title_logement">{logement.title}</h2>
                     <p className="text_logement">{logement.location}</p>
-
                     <div className="tag_logement">
-                        {logement.tags.map((tag, i) => <span key={i}>{tag}</span>)}
+                        {logement.tags.map((tag) => <span key={tag}>{tag}</span>)}
                     </div>
                     <div className="logement_info">
                         <div className="logement_profil">
