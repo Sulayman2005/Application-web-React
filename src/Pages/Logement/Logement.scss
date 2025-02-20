@@ -39,15 +39,16 @@
     }
 }
 
-
 .text2 {
     display: grid;
     place-items: end;
+    margin-left: auto;
     margin-top: -50px;
-    margin-right: 70px;
+    margin-right: 60px;
     font-family: Montserrat;
     font-weight: 500;
     font-size: 18px;
+    width: 93px;
     color: #FF6060;
 }
 
@@ -163,6 +164,13 @@ ul {
 }
 
 /* Version Mobile */
+@media screen and (max-width: 500px) {
+    .element {
+        max-width: 580px;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .btn-right {
         cursor: pointer;
