@@ -15,15 +15,15 @@ function Logement() {
     const imageCarrousel = logement.pictures
     
     const nextSlide = () => {
-        setIndex(Index + 1);
+        setIndex(Index + 1)
         if(Index === imageCarrousel.length - 1){
             setIndex(0);
         }
-    };
+    }
 
     const prevSlide = () => {
         setIndex(Index === 0 ? imageCarrousel.length - 1 : Index - 1)
-    };
+    }
 
     return (
         <>
