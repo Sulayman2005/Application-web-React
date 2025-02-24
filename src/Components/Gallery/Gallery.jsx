@@ -5,13 +5,11 @@ import "./Gallery.scss"
 
 function Gallery() {
     return (
-        <div className="text_image">
+        <div className="gallery_container">
             {logements.map((logement) => (
                 <div key={logement.id}>
-                    <Link 
-                        to={`/logement/${logement.id}`}
-                    >
-                        <div className="text">
+                    <Link to={`/logement/${logement.id}`}>
+                        <div className="import_element">
                             <img src={logement.cover} alt="" />
                             <h2>{logement.title}</h2>
                         </div>

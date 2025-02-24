@@ -39,6 +39,10 @@
     }
 }
 
+.logement_info {
+    margin-top: -120px;
+}
+
 .text2 {
     display: grid;
     place-items: end;
@@ -81,8 +85,7 @@
     font-family: Montserrat;
     font-weight: 500;
     font-size: 18px;
-    line-height: 25.67px;
-    letter-spacing: 0%;
+    margin-top: -8x;
     color: #000000;
 }
 
@@ -134,7 +137,6 @@
 .about2 {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
 }
 
 
