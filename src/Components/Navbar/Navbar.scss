@@ -1,5 +1,5 @@
 .element_navbar {
-    max-width: 1600px;
+    max-width: 1350px;
     margin: auto;
     position: relative;
 }
@@ -26,6 +26,7 @@
 .text {
     font-family: Montserrat;
     font-size: 18px;
+    width: 136px;
     font-weight: 500;
     line-height: 17.11px;
     text-align: right;
@@ -36,6 +37,8 @@
     cursor: pointer;
     color: #000000;
     &_2 {
+        width: 116px;
+
         font-family: Montserrat;
         line-height: 17.11px;
         cursor: pointer;

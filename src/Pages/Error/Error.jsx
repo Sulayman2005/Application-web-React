@@ -19,14 +19,14 @@ function Error() {
                     <Link style={{ textDecoration: 'none'}} 
                         className="text_2">
                         <div>A propos</div>
-                    </Link>               
+                    </Link>         
                 </nav>
             </div>
             <div className="container_error">
                 <h1 className="error_page">404</h1>
                 <p className="text_error">Oups! La page que vous demandez n'existe pas</p>
                 <p onClick={() => {
-                        navigate(-1);
+                        navigate(-1)
                     }}id="texterror" className="link_error">
                         Retourner sur la Page d'accueil
                 </p>

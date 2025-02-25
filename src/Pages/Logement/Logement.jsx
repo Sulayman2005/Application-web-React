@@ -9,10 +9,10 @@ import Arrowleft from "../../assets/images/Arrow-left.png"
 import Arrowright from "../../assets/images/Arrow-right.png"
 function Logement() {
 
-    const { id } = useParams();
-    const logement = logements.find(item => item.id === id);
+    const { id } = useParams()
+    const logement = logements.find(item => item.id === id)
 
-    const [Index, setIndex] = useState(0);
+    const [Index, setIndex] = useState(0)
         
     const imageCarrousel = logement.pictures
     
@@ -32,7 +32,7 @@ function Logement() {
             <div className="element_navbar">
                 <nav className="navbar">
                     <img src={logo} alt="Logo" className="navbar__logo"/>
-                    <Link to="/"style={{ textDecoration: 'none'}}>
+                    <Link to="/" style={{ textDecoration: 'none'}}>
                         <div className="text">Accueil</div>
                     </Link> 
                     <Link to="/propos" style={{ textDecoration: 'none'}} 
@@ -84,18 +84,18 @@ function Logement() {
                     </div>
                 </div>
             </div>
-            <div className="about2">
-                <div className="about3">
-                    <Collapse2 titre="Description" content2={logement.description} />
+                <div className="about2">
+                    <div className="about3">
+                        <Collapse2 titre="Description" content2={logement.description} />
+                    </div>
+                    <Collapse2 titre="Équipements" content2={
+                        <ul className="equipements-list">
+                            {logement.equipments.map((equip, i) => (
+                                <li key={i}>{equip}</li>
+                            ))}
+                        </ul>
+                    } />
                 </div>
-                <Collapse2 titre="Équipements" content2={
-                    <ul className="equipements-list">
-                        {logement.equipments.map((equip, i) => (
-                            <li key={i}>{equip}</li>
-                        ))}
-                    </ul>
-                } />
-            </div>
         </>
     )
 }

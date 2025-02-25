@@ -11,8 +11,8 @@ function Propos() {
     const Sécurité = "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
     return (
         <>
-            <div className="element_navbar">
-                <nav className="navbar">
+            <div className="element_navbar2">
+                <nav className="navbar2">
                     <img src={logo} alt="Logo" className="navbar__logo"/>
                     <Link to="/" style={{ textDecoration: 'none'}}>
                         <div className="text">Accueil</div>
@@ -22,9 +22,8 @@ function Propos() {
                     </Link>               
                 </nav>
             </div>
+            <div className="banner2"></div>
             <div className="flex">
-                <div className="banner2">
-                </div>
                 <div className="about">
                     <div><Page title="Fiabilité" content={Fiabilité} /></div>
                     <div><Page title="Respect" content={Respect} /></div>
