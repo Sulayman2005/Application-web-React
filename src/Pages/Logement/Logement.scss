@@ -137,6 +137,8 @@
 .about2 {
     display: flex;
     justify-content: space-between;
+    max-width: 1600px;
+    margin: auto;
 }
 
 
@@ -173,20 +175,21 @@ ul {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
     .btn-right {
         cursor: pointer;
         position: absolute;
         content: "";
-        top: 40%;
-        left: 90%;
+        width: 4%;
+        font-size: 12px;
+        color: #FFFFFF;
     }
     .btn-left {
         cursor: pointer;
         position: absolute;
         content: "";
-        top: 40%;
-        right: 92%;
+        width: 4%;
+        color: #FFFFFF;
     }
 }
 

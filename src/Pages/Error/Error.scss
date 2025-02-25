@@ -40,5 +40,17 @@
     text-decoration-style: solid;
     text-decoration-thickness: Auto;
     color: black;
+    cursor: pointer;
 }
 
+.button_random {
+    background: green;
+}
+
+.button_random2 {
+    background: red;
+}
+
+.button_reset {
+    background-color: grey;
+}

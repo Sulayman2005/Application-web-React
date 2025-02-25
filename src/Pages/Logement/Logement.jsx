@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import "./Logement.scss"
 import Collapse2 from "../Collapse/Collapse2.jsx"
 import { useParams } from "react-router-dom" // Pour récupérer l'ID
+import logo from "../../assets/images/logo.png"
+import { Link } from "react-router"
 import logements from "../../data/logements.json"
 import Arrowleft from "../../assets/images/Arrow-left.png"
 import Arrowright from "../../assets/images/Arrow-right.png"
@@ -27,6 +29,18 @@ function Logement() {
 
     return (
         <>
+            <div className="element_navbar">
+                <nav className="navbar">
+                    <img src={logo} alt="Logo" className="navbar__logo"/>
+                    <Link to="/"style={{ textDecoration: 'none'}}>
+                        <div className="text">Accueil</div>
+                    </Link> 
+                    <Link to="/propos" style={{ textDecoration: 'none'}} 
+                        className="text_2">
+                        <div>A propos</div>
+                    </Link>               
+                </nav>
+            </div>
             <div className="element">
                 <div className="Carrousel">
                     <div className="element_page" style={{ backgroundImage: `url(${imageCarrousel[Index]})` }}>
@@ -69,18 +83,18 @@ function Logement() {
                         </div>
                     </div>
                 </div>
-                <div className="about2">
-                    <div className="about3">
-                        <Collapse2 titre="Description" content2={logement.description} />
-                    </div>
-                    <Collapse2 titre="Équipements" content2={
-                        <ul className="equipements-list">
-                            {logement.equipments.map((equip, i) => (
-                                <li key={i}>{equip}</li>
-                            ))}
-                        </ul>
-                    } />
+            </div>
+            <div className="about2">
+                <div className="about3">
+                    <Collapse2 titre="Description" content2={logement.description} />
                 </div>
+                <Collapse2 titre="Équipements" content2={
+                    <ul className="equipements-list">
+                        {logement.equipments.map((equip, i) => (
+                            <li key={i}>{equip}</li>
+                        ))}
+                    </ul>
+                } />
             </div>
         </>
     )

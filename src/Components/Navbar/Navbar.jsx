@@ -6,9 +6,7 @@ function Navbar() {
     return (
         <div className="element_navbar">
             <nav className="navbar">
-                <Link to="/" className="navbar__logo">
-                    <img src={logo} alt="Logo"/>
-                </Link>
+                <img src={logo} alt="Logo" className="navbar__logo"/>
                 <Link to="/">
                     <div className="text">Accueil</div>
                 </Link> 
