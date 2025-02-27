@@ -3,8 +3,6 @@
     min-height: 10vh;
     border-radius: 2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     margin: auto;
@@ -18,7 +16,6 @@
     position: relative;
     border-radius: 10px;
     display: flex;
-    align-items: flex-end;
     &::after {
         position: absolute;
         content: "";
@@ -48,12 +45,11 @@
     & h2 {
         position: absolute;
         content: "";
-        font-family: Montserat;
+        font-family: "Montserrat", serif;
         font-weight: 700;
-        font-size: 17px;
+        font-size: 15px;
         left: 30px;
-        top: 300px;
-        margin-bottom: 5px;
+        top: 290px;
         z-index: 1;
         color: white;
     }

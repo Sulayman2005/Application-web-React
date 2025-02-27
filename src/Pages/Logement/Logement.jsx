@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import "./Logement.scss"
-import Collapse2 from "../Collapse/Collapse2.jsx"
+import Collapse2 from "../../Components/Collapse/Collapse2.jsx"
 import { useParams } from "react-router-dom" // Pour récupérer l'ID
 import logo from "../../assets/images/logo.png"
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 import logements from "../../data/logements.json"
 import Arrowleft from "../../assets/images/Arrow-left.png"
 import Arrowright from "../../assets/images/Arrow-right.png"
@@ -13,7 +13,7 @@ function Logement() {
     const logement = logements.find(item => item.id === id)
 
     const [Index, setIndex] = useState(0)
-        
+
     const imageCarrousel = logement.pictures
     
     const nextSlide = () => {

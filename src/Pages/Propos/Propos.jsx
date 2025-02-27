@@ -1,4 +1,4 @@
-import Page from "../Collapse/Collapse.jsx"
+import Page from "../../Components/Collapse/Collapse.jsx"
 import "./Propos.scss"
 import logo from "../../assets/images/logo.png"
 import React from "react"
