@@ -1,4 +1,4 @@
-import Page from "../../Components/Collapse/Collapse.jsx"
+import Collapse from "../../Components/Collapse/Collapse.jsx"
 import "./Propos.scss"
 import logo from "../../assets/images/logo.png"
 import React from "react"
@@ -25,10 +25,10 @@ function Propos() {
             <div className="banner2"></div>
             <div className="flex">
                 <div className="about">
-                    <div><Page title="Fiabilité" content={Fiabilité} /></div>
-                    <div><Page title="Respect" content={Respect} /></div>
-                    <div><Page title="Service" content={Service} /></div>
-                    <div><Page title="Sécurité" content={Sécurité} /></div>
+                    <div><Collapse title="Fiabilité" content={Fiabilité} /></div>
+                    <div><Collapse title="Respect" content={Respect} /></div>
+                    <div><Collapse title="Service" content={Service} /></div>
+                    <div><Collapse title="Sécurité" content={Sécurité} /></div>
                 </div>
             </div>
         </>

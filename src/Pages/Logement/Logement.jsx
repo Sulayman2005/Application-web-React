@@ -67,7 +67,7 @@ function Logement() {
                     <h2 className="title_logement">{logement.title}</h2>
                     <p className="text_logement">{logement.location}</p>
                     <div className="tag_logement">
-                        {logement.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                        {logement.tags.map((tag) => <span key={id}>{tag}</span>)}
                     </div>
                     <div className="logement_info">
                         <div className="logement_profil">
@@ -84,18 +84,18 @@ function Logement() {
                     </div>
                 </div>
             </div>
-                <div className="about2">
-                    <div className="about3">
-                        <Collapse2 titre="Description" content2={logement.description} />
-                    </div>
-                    <Collapse2 titre="Équipements" content2={
-                        <ul className="equipements-list">
-                            {logement.equipments.map((equip, i) => (
-                                <li key={i}>{equip}</li>
-                            ))}
-                        </ul>
-                    } />
+            <div className="about2">
+                <div className="about3">
+                    <Collapse2 titre="Description" content2={logement.description} />
                 </div>
+                <Collapse2 titre="Équipements" content2={
+                    <ul className="equipements-list">
+                        {logement.equipments.map((equipement, index) => (
+                            <li key={index}>{equipement}</li>
+                        ))}
+                    </ul>
+                } />
+            </div>
         </>
     )
 }

@@ -4,11 +4,11 @@ import ChevronUp from "../../assets/images/ChevronUp.png"
 import ChevronDown from "../../assets/images/ChevronDown.png"
 
 function Collapse({ title, content }) {
-    const [contentvisible, setcontentvisible] = useState("");
+    const [contentvisible, setcontentvisible] = useState("")
 
     const affContent = () => {
-        setcontentvisible(!contentvisible);
-    };
+        setcontentvisible(!contentvisible)
+    }
 
     return (
         <>
@@ -24,7 +24,7 @@ function Collapse({ title, content }) {
                 </div>
             </div>
         </>
-    );
+    )
 }
 
-export default Collapse;
+export default Collapse
