@@ -137,8 +137,15 @@
     justify-content: space-between;
     max-width: 1370px;
     margin: auto;
+    gap: 7rem;
 }
 
+.about3 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 670px;
+    margin: auto;
+}
 
 .about4 {
     .equipements-list {
@@ -262,6 +269,12 @@ ul {
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    .about3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1240px;
     }
 }
 

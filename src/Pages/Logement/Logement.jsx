@@ -1,63 +1,50 @@
 import React, { useState } from "react"
 import "./Logement.scss"
-import Collapse2 from "../../Components/Collapse/Collapse2.jsx"
-import { useParams } from "react-router-dom" // Pour récupérer l'ID
-import logo from "../../assets/images/logo.png"
-import { Link } from "react-router-dom"
+import Collapse from "../../Components/Collapse/Collapse.jsx"
+import { useParams } from "react-router-dom"
 import logements from "../../data/logements.json"
 import Arrowleft from "../../assets/images/Arrow-left.png"
 import Arrowright from "../../assets/images/Arrow-right.png"
-function Logement() {
 
+function Logement() {
     const { id } = useParams()
     const logement = logements.find(item => item.id === id)
-
-    const [Index, setIndex] = useState(0)
+    const [index, setIndex] = useState(0)
 
     const imageCarrousel = logement.pictures
-    
+
     const nextSlide = () => {
-        setIndex(Index + 1)
-        if(Index === imageCarrousel.length - 1){
-            setIndex(0);
+        setIndex(index + 1)
+        if(index === imageCarrousel.length - 1){
+            setIndex(0)
         }
     }
 
     const prevSlide = () => {
-        setIndex(Index === 0 ? imageCarrousel.length - 1 : Index - 1)
+        setIndex(index === 0 ? imageCarrousel.length - 1 : index - 1)
     }
 
     return (
         <>
-            <div className="element_navbar">
-                <nav className="navbar">
-                    <img src={logo} alt="Logo" className="navbar__logo"/>
-                    <Link to="/" style={{ textDecoration: 'none'}}>
-                        <div className="text">Accueil</div>
-                    </Link> 
-                    <Link to="/propos" style={{ textDecoration: 'none'}} 
-                        className="text_2">
-                        <div>A propos</div>
-                    </Link>               
-                </nav>
-            </div>
             <div className="element">
                 <div className="Carrousel">
-                    <div className="element_page" style={{ backgroundImage: `url(${imageCarrousel[Index]})` }}>
+                    <div className="element_page" style={{ backgroundImage: `url(${imageCarrousel[index]})` }}>
                         {imageCarrousel.length > 1 && (
                             <>
                                 <img 
                                     src={Arrowright}
                                     className="btn-right"
                                     onClick={nextSlide}
+                                    alt="Next slide"
                                 />
                                 <img 
                                     src={Arrowleft}
                                     className="btn-left"
                                     onClick={prevSlide}
+                                    alt="Prev slide"
                                 />
                                 <p className="counter">
-                                    {Index + 1} / {imageCarrousel.length}
+                                    {index + 1} / {imageCarrousel.length}
                                 </p>
                             </>
                         )}
@@ -67,7 +54,7 @@ function Logement() {
                     <h2 className="title_logement">{logement.title}</h2>
                     <p className="text_logement">{logement.location}</p>
                     <div className="tag_logement">
-                        {logement.tags.map((tag) => <span key={id}>{tag}</span>)}
+                        {logement.tags.map((tag, index) => <span key={index}>{tag}</span>)}
                     </div>
                     <div className="logement_info">
                         <div className="logement_profil">
@@ -86,9 +73,9 @@ function Logement() {
             </div>
             <div className="about2">
                 <div className="about3">
-                    <Collapse2 titre="Description" content2={logement.description} />
+                    <Collapse title="Description" content={logement.description} />
                 </div>
-                <Collapse2 titre="Équipements" content2={
+                <Collapse title="Équipements" content={
                     <ul className="equipements-list">
                         {logement.equipments.map((equipement, index) => (
                             <li key={index}>{equipement}</li>
@@ -97,7 +84,7 @@ function Logement() {
                 } />
             </div>
         </>
-    )
+    );
 }
 
 export default Logement
